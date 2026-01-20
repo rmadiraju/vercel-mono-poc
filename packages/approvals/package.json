@@ -1,0 +1,14 @@
+{
+  "name": "@repo/approvals-shared",
+  "version": "0.1.0",
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  }
+}

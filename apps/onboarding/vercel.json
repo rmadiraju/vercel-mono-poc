@@ -1,0 +1,7 @@
+{
+  "buildCommand": "cd ../.. && npm run build --filter=@repo/onboarding",
+  "devCommand": "cd ../.. && npm run dev --filter=@repo/onboarding",
+  "installCommand": "cd ../.. && npm install",
+  "framework": "nextjs",
+  "outputDirectory": ".next"
+}

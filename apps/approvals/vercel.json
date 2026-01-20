@@ -1,0 +1,7 @@
+{
+  "buildCommand": "cd ../.. && npm run build --filter=@repo/approvals",
+  "devCommand": "cd ../.. && npm run dev --filter=@repo/approvals",
+  "installCommand": "cd ../.. && npm install",
+  "framework": "nextjs",
+  "outputDirectory": ".next"
+}

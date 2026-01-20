@@ -1,0 +1,30 @@
+{
+  "name": "vercel-mono-poc",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "deploy:all": "./scripts/deploy.sh",
+    "deploy:feature-flags": "vercel --cwd apps/feature-flags --yes",
+    "deploy:onboarding": "vercel --cwd apps/onboarding --yes",
+    "deploy:approvals": "vercel --cwd apps/approvals --yes",
+    "deploy:release": "vercel --cwd apps/release --yes",
+    "build:feature-flags": "turbo run build --filter=@repo/feature-flags-app",
+    "build:onboarding": "turbo run build --filter=@repo/onboarding",
+    "build:approvals": "turbo run build --filter=@repo/approvals",
+    "build:release": "turbo run build --filter=@repo/release"
+  },
+  "devDependencies": {
+    "prettier": "^3.0.0",
+    "turbo": "^2.0.0",
+    "typescript": "^5.0.0"
+  },
+  "packageManager": "npm@9.0.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
+}
