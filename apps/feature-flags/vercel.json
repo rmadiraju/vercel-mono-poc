@@ -1,7 +1,5 @@
 {
-  "buildCommand": "cd ../.. && npm run build --filter=@repo/feature-flags-app",
-  "devCommand": "cd ../.. && npm run dev --filter=@repo/feature-flags-app",
   "installCommand": "cd ../.. && npm install",
-  "framework": "nextjs",
-  "outputDirectory": ".next"
+  "buildCommand": "cd ../.. && npx turbo run build --filter=@repo/feature-flags-app",
+  "framework": "nextjs"
 }

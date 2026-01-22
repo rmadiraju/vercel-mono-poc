@@ -1,7 +1,5 @@
 {
-  "buildCommand": "cd ../.. && npm run build --filter=@repo/release",
-  "devCommand": "cd ../.. && npm run dev --filter=@repo/release",
   "installCommand": "cd ../.. && npm install",
-  "framework": "nextjs",
-  "outputDirectory": ".next"
+  "buildCommand": "cd ../.. && npx turbo run build --filter=@repo/release",
+  "framework": "nextjs"
 }

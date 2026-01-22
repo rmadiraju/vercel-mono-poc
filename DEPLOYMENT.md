@@ -217,35 +217,25 @@ chmod +x scripts/*.sh
 
 ### Option 1: Deploy Each App as Separate Vercel Projects (Recommended)
 
-When setting up projects in Vercel Dashboard:
+When setting up projects in Vercel Dashboard, configure the following:
 
-1. **Feature Flags App**
-   - Root Directory: `apps/feature-flags`
-   - Framework Preset: Next.js
-   - Build Command: `cd ../.. && npm run build --filter=@repo/feature-flags-app`
-   - Install Command: `npm install`
-   - Output Directory: `.next`
+**For each app (feature-flags, onboarding, approvals, release):**
 
-2. **Onboarding App**
-   - Root Directory: `apps/onboarding`
-   - Framework Preset: Next.js
-   - Build Command: `cd ../.. && npm run build --filter=@repo/onboarding`
-   - Install Command: `npm install`
-   - Output Directory: `.next`
+1. **Project Settings → General:**
+   - **Root Directory**: `apps/<app-name>` (e.g., `apps/feature-flags`)
+   - **Framework Preset**: Next.js (auto-detected)
 
-3. **Approvals App**
-   - Root Directory: `apps/approvals`
-   - Framework Preset: Next.js
-   - Build Command: `cd ../.. && npm run build --filter=@repo/approvals`
-   - Install Command: `npm install`
-   - Output Directory: `.next`
+2. **Project Settings → Build & Development Settings:**
+   - **Install Command**: `cd ../.. && npm install` (or leave empty - vercel.json handles it)
+   - **Build Command**: Leave empty (vercel.json in each app handles this automatically)
+   - **Output Directory**: `.next` (auto-detected)
 
-4. **Release App**
-   - Root Directory: `apps/release`
-   - Framework Preset: Next.js
-   - Build Command: `cd ../.. && npm run build --filter=@repo/release`
-   - Install Command: `npm install`
-   - Output Directory: `.next`
+**Note:** Each app has a `vercel.json` file that automatically configures:
+- Install command to run from root
+- Build command using Turborepo with the correct filter
+- Framework detection
+
+**See `VERCEL_SETUP.md` for detailed dashboard configuration instructions.**
 
 ## Environment Variables
 
