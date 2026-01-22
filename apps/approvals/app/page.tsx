@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <main className="container">
       <h1>Approvals</h1>
-      <p>Manage approvals for onboarded clients!!!!</p>
+      <p>Manage approvals for onboarded clients</p>
       <div className="info-box">
         <p>
           <strong>Approval Workflow:</strong>{' '}
