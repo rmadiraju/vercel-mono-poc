@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <main className="container">
       <h1>Client Onboarding</h1>
-      <p>Welcome to the onboarding process</p>
+      <p>Welcome to the onboarding process - Dev</p>
       <div className="info-box">
         <p>
           <strong>New Onboarding Flow:</strong>{' '}
